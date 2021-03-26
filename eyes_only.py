@@ -9,7 +9,7 @@ while True:
 	gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 	eyes = eye_cascade.detectMultiScale(gray)
 	for (ex,ey,ew,eh) in eyes:
-		cv2.rectangle(gray,(ex,ey),(ex+ew,ey+eh),(0,255,0),2)
+		cv2.rectangle(gray,(ex,ey),(ex+ew,ey+eh),(255,255,0),2)
 	cv2.imshow('img',gray)
 	h = str(type(eyes))
 	if h == "<class 'tuple'>":
